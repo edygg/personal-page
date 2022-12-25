@@ -1,10 +1,11 @@
-
+import TopNavbar from "../components/navigation/topNavbar/TopNavbar";
 
 export default function Home() {
   return (
     <>
+      <TopNavbar/>
       <main>
-        <p>Hola mundo loco</p>
+        <h1 className={"text-3xl font-bold underline"}>Hola mundo loco</h1>
       </main>
     </>
   )
