@@ -67,7 +67,7 @@ export default function TopNavbar() {
       </div>
       {displayResume && (
         <div className="navbar-end">
-          <Link className="btn btn-accent" href={displayResume.href} >{displayResume.title}</Link>
+          <Link className="btn btn-accent" target="_blank" href={displayResume.href} >{displayResume.title}</Link>
         </div>
       )}
     </div>
