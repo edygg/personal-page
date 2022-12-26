@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <TopNavbar/>
-      <main>
+      <main className="container mx-auto">
         <ProfileSummary />
         <Experience />
         <ContactForm />

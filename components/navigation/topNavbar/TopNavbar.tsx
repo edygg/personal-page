@@ -2,6 +2,7 @@ import Image from 'next/image'
 import TopNavbarMenu from "./TopNavbarMenu";
 import TopNavbarMenuItem from "./TopNavbarMenuItem";
 import Link from "next/link";
+import logo from "../../../public/main-logo.svg"
 
 export default function TopNavbar() {
 
@@ -57,7 +58,7 @@ export default function TopNavbar() {
           </TopNavbarMenu>
         </div>
         <a className="btn btn-ghost normal-case text-xl">
-          <Image src={"/main-logo.svg"} width={100} height={70} alt={"EdyG's main logo"} />
+          <Image src={logo} width={100} height={70} alt={"EdyG's main logo"} />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
