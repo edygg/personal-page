@@ -3,17 +3,32 @@ import Footer from "../components/navigation/footer/Footer";
 import ProfileSummary from "../components/ content/ProfileSummary";
 import Experience from "../components/ content/Experience";
 import ContactForm from "../components/ content/ContactForm";
+import {getHTMLContentFromMd} from "../libs/content/utils";
 
-export default function Home() {
+type HomeProps = {
+  profileSummaryContent: any
+}
+export default function Home({profileSummaryContent}: HomeProps) {
   return (
     <>
       <TopNavbar/>
       <main className="container mx-auto">
-        <ProfileSummary />
+        <ProfileSummary profileSummary={profileSummaryContent} />
         <Experience />
         <ContactForm />
       </main>
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const profileSummaryContent =
+    await getHTMLContentFromMd("home/profile")
+
+  return {
+    props: {
+      profileSummaryContent
+    }
+  }
 }
